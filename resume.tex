@@ -9,6 +9,17 @@
 \usepackage{tabularx}
 
 \pagestyle{empty}
+\raggedbottom\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.6in,top=0.45in,bottom=0.45in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{tabularx}
+
+\pagestyle{empty}
 \raggedbottom
 \raggedright
 
@@ -73,7 +84,7 @@
 
 % ---------- WORK EXPERIENCE ----------
 \section*{Work Experience}
-\resumeProjectHeading{Software Engineer Intern \ $\vert$\ Google}{May 2026 -- Aug 2026}
+\resumeProjectHeading{Google \ $\vert$\ Software Engineering Intern}{May 2026 -- Aug 2026}
 \begin{itemize}
     \item Interned in GCP Datastream, a serverless Change Data Capture (CDC) and data replication service.
     \item Automated source reader error mappings to eliminate false-positive system alerts and restore accurate SLO telemetry.
@@ -81,7 +92,142 @@
 \end{itemize}
 
 \vspace{4pt}
-\resumeProjectHeading{Software Engineer Intern \ $\vert$\ AI Gurukul}{May 2025 -- Jul 2025}
+\resumeProjectHeading{AI Gurukul \ $\vert$\ Software Engineering Intern}{May 2025 -- Jul 2025}
+\begin{itemize}
+    \item Developed AI agents using CrewAI and Gemini API with PostgreSQL for \href{https://github.com/Darelife/xpia}{XPIA}, E-Library, and \href{https://github.com/Darelife/AlgoInstaAutomated/}{Instagram Automater}.
+    \item Implemented a PDF RAG pipeline combining BM25 keyword matching and vector search to reduce LLM hallucinations.
+\end{itemize}
+
+% ---------- PROJECTS ----------
+\section*{Projects}
+\resumeProjectHeading{\href{https://github.com/Darelife/xpia}{XPIA Attack -- Agent Exploitation Demo}}{Jun 2025 -- Jul 2025}
+\begin{itemize}
+    \item Simulated an automated Cross Platform Injection Attack (XPIA) where an AI agent interacts with malicious prompts to extract sensitive data and manipulate a Supabase Postgres database.
+    \item Integrated CrewAI and Gemini API for natural language understanding and prompt-driven attack simulation.
+    \item Built custom Python tools for prompt parsing, HTTP request handling, file operations, and attack scenarios.
+\end{itemize}
+
+\vspace{4pt}
+\resumeProjectHeading{\href{https://github.com/Darelife/PacMan-hackenza2.0}{PacMan: Network Packet Analyzer}}{Mar 2025}
+\begin{itemize}
+    \item Secured 2nd place out of 200+ teams in a 24-hour hackathon building a web-based PCAPNG packet analysis tool.
+    \item Built with Next.js, Flask, Scapy, and Pyshark to capture packets, filter traffic, and stream real-time metrics (latency, jitter, packet loss) to an interactive frontend.
+\end{itemize}
+
+\vspace{4pt}
+\resumeProjectHeading{Codeforces Helper -- Browser Extension}{Dec 2024 -- Apr 2025}
+\begin{itemize}
+    \item \href{https://chromewebstore.google.com/detail/codeforces-helper/ahoeafmlmoohkkalcickdnkifpfnolpj}{Chrome} and \href{https://addons.mozilla.org/en-US/firefox/addon/codeforces-helper/}{Firefox} extension serving 2,000+ active users to enhance competitive programming workflows.
+    \item Features contest tracking, tag hiding, multi-user rating graphs, and question bookmarking using JavaScript.
+\end{itemize}
+
+\vspace{4pt}
+\resumeProjectHeading{\href{https://github.com/darelife/singAssist}{Sing Assist -- Real-Time Audio Analysis}}{Feb 2026 -- Apr 2026}
+\begin{itemize}
+    \item Built a real-time pitch tracker in Go using FFT and pYIN algorithms to extract fundamental vocal frequencies.
+    \item Implemented moving-average pitch smoothing and frequency-matching logic to score live audio input.
+\end{itemize}
+
+\vspace{4pt}
+\resumeProjectHeading{\href{https://github.com/Darelife/MultiEquationSolver}{Multi-Variable Equation Solver}}{Jan 2024}
+\begin{itemize}
+    \item Built a C++ CLI tool to solve linear equation systems via Gauss-Jordan Elimination with step-by-step output.
+    \item Used determinant checks and RREF to detect singular and inconsistent systems.
+\end{itemize}
+
+% ---------- AWARDS & RECOGNITIONS ----------
+\section*{Awards \& Recognitions}
+\resumeProjectHeading{Expert on Codeforces (Peak Rating: 1643) \ $\vert$\ Handle: \href{https://codeforces.com/profile/darelife}{darelife}}{Jun 2025}
+\begin{itemize}
+    \item Solved 714+ competitive programming problems and competed in 55+ contests.
+\end{itemize}
+
+% ---------- LEADERSHIP & VOLUNTEERING ----------
+\section*{Leadership \& Experience}
+\resumeProjectHeading{AlgoManiaX (Competitive Programming Club, BITS Goa) \ $\vert$\ Sub Coordinator}{Mar 2024 -- Present}
+\begin{itemize}
+    \item Developed the official \href{https://algomaniax.vercel.app/}{AlgoManiaX website} and a \href{https://github.com/darelife/synanit2.0}{Discord Bot} hosted on Google Cloud VM for club operations.
+    \item Created Manim animation videos for problem explanations; POC for BGCL 6.0 and automated social media updates.
+\end{itemize}
+
+\vspace{4pt}
+\resumeProjectHeading{Peer Mentorship Program (PMP) \ $\vert$\ Mentor, Social Services}{Aug 2024 -- May 2025}
+\begin{itemize}
+    \item Mentored 6 first-year students to guide academic adaptation and college resource accessibility.
+\end{itemize}
+
+\end{document}\raggedright
+
+% Colors
+\definecolor{primary}{RGB}{30, 41, 59}     % Slate dark
+\definecolor{linkcol}{RGB}{15, 23, 42}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcol,
+    urlcolor=linkcol
+}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries\scshape\color{primary}}{}{0em}{}[\color{primary}\titlerule]
+\titlespacing{\section}{0pt}{11pt}{5pt}
+
+% Itemize formatting
+\setlist[itemize]{leftmargin=14pt, topsep=3pt, itemsep=3pt, parsep=0pt, partopsep=0pt}
+
+% Subheading commands
+\newcommand{\resumeSubheading}[4]{
+  \vspace{2pt}
+  \noindent
+  \begin{tabularx}{\linewidth}{@{}X r@{}}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small#4} \\
+  \end{tabularx}\vspace{-2pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{2pt}
+  \noindent
+  \begin{tabularx}{\linewidth}{@{}X r@{}}
+    \textbf{#1} & #2 \\
+  \end{tabularx}\vspace{-4pt}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\begin{document}
+
+% ---------- HEADER ----------
+\begin{center}
+    {\Huge \textbf{\scshape Prakhar Bhandari}} \\[5pt]
+    \small B.E. (Hons.) Computer Science \ $\cdot$\ BITS Pilani, Goa Campus \ $\cdot$\ Class of 2027 \\[4pt]
+    \small \href{mailto:f20230458@goa.bits-pilani.ac.in}{f20230458@goa.bits-pilani.ac.in} \ $\vert$\ +91 9136540772 \ $\vert$\ 
+    \href{https://github.com/darelife}{GitHub} \ $\vert$\ 
+    \href{https://codeforces.com/profile/darelife}{Codeforces} \ $\vert$\ CGPA: 8.42
+\end{center}
+\vspace{2pt}
+
+% ---------- EDUCATION ----------
+\section*{Education}
+\resumeSubheading
+    {BITS Pilani, Goa Campus}{2023 -- 2027}
+    {B.E. (Hons.) Computer Science \ $\cdot$\ CGPA: 8.42}{}
+
+\vspace{6pt}
+\small{\textbf{Relevant Coursework:} Digital Design, Database Management Systems, Data Structures \& Algorithms, Object Oriented Programming, Computer Programming}
+
+% ---------- WORK EXPERIENCE ----------
+\section*{Work Experience}
+\resumeProjectHeading{Google \ $\vert$\ Software Engineering Intern}{May 2026 -- Aug 2026}
+\begin{itemize}
+    \item Interned in GCP Datastream, a serverless Change Data Capture (CDC) and data replication service.
+    \item Automated source reader error mappings to eliminate false-positive system alerts and restore accurate SLO telemetry.
+    \item Built an on-call telemetry dashboard mapping SLO fast burns against pod rollouts to accelerate failure diagnosis.
+\end{itemize}
+
+\vspace{4pt}
+\resumeProjectHeading{AI Gurukul \ $\vert$\ Software Engineering Intern}{May 2025 -- Jul 2025}
 \begin{itemize}
     \item Developed AI agents using CrewAI and Gemini API with PostgreSQL for \href{https://github.com/Darelife/xpia}{XPIA}, E-Library, and \href{https://github.com/Darelife/AlgoInstaAutomated/}{Instagram Automater}.
     \item Implemented a PDF RAG pipeline combining BM25 keyword matching and vector search to reduce LLM hallucinations.
