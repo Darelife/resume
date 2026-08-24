@@ -1,6 +1,6 @@
 \documentclass[10pt,letterpaper]{article}
 
-\usepackage[margin=0.6in,top=0.45in,bottom=0.45in]{geometry}
+\usepackage[margin=0.6in,top=0.35in,bottom=0.15in]{geometry}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{hyperref}
@@ -14,7 +14,7 @@
 
 % Colors
 \definecolor{primary}{RGB}{30, 41, 59}     % Slate dark
-\definecolor{linkcol}{RGB}{15, 23, 42}
+\definecolor{linkcol}{RGB}{37, 99, 235}
 
 \hypersetup{
     colorlinks=true,
@@ -27,7 +27,7 @@
 \titlespacing{\section}{0pt}{11pt}{5pt}
 
 % Itemize formatting
-\setlist[itemize]{leftmargin=14pt, topsep=3pt, itemsep=3pt, parsep=0pt, partopsep=0pt}
+\setlist[itemize]{leftmargin=14pt, topsep=2pt, itemsep=2pt, parsep=0pt, partopsep=0pt}
 
 % Subheading commands
 \newcommand{\resumeSubheading}[4]{
@@ -55,10 +55,10 @@
 % ---------- HEADER ----------
 \begin{center}
     {\Huge \textbf{\scshape Prakhar Bhandari}} \\[5pt]
-    \small \href{mailto:prakharb2k6@gmail.com}{prakharb2k6@gmail.com} \ $\vert$\ \href{mailto:f20230458@goa.bits-pilani.ac.in}{f20230458@goa.bits-pilani.ac.in} \\[4pt]
+    \small \href{mailto:prakharb2k6@gmail.com}{prakharb2k6@gmail.com} $\vert$\ \href{mailto:f20230458@goa.bits-pilani.ac.in}{f20230458@goa.bits-pilani.ac.in} \\[4pt]
     \small 
-    \href{https://github.com/darelife}{GitHub: Darelife} \ $\vert$\ 
-    \href{https://codeforces.com/profile/darelife}{Codeforces: Darelife} \ $\vert$\ CGPA: 8.42
+    \href{https://github.com/darelife}{GitHub: Darelife} $\vert$\ 
+    \href{https://codeforces.com/profile/darelife}{Codeforces: Darelife} $\vert$\ \href{https://www.darelife.xyz/}{Personal Website} $\vert$\ CGPA: 8.42
 \end{center}
 % \vspace{2pt}
 
@@ -96,38 +96,46 @@
 % ---------- PROJECTS ----------
 \section*{Projects}
 
-\resumeProjectHeading{\href{https://github.com/Darelife/PacMan-hackenza2.0}{\textbf{PacMan: Network Packet Analyzer}}}{Mar 2025}
+\resumeSubheading
+    {PacMan: Network Packet Analyzer}{Mar 2025}
+    {Full-Stack Development \ $\vert$\ \href{https://github.com/Darelife/PacMan-hackenza2.0}{github.com/Darelife/PacMan-hackenza2.0}}{}
 \begin{itemize}
     \item Won \textbf{2nd place out of 200+ teams} in a 24-hr hackathon building a web PCAP/PCAPNG network packet analyzer.
     \item Engineered a full-stack deep packet inspection platform using \textbf{Next.js}, \textbf{Flask}, \textbf{Scapy}, and \textbf{Pyshark} to capture live network packets, parse multi-layer protocol headers and payloads, and stream real-time telemetry metrics via WebSockets.
 \end{itemize}
 
-\vspace{3pt}
-\resumeProjectHeading{\textbf{Codeforces Helper -- Browser Extension}}{Dec 2024 -- Apr 2025}
+\vspace{2pt}
+\resumeSubheading
+    {Codeforces Helper -- Browser Extension}{Dec 2024 -- Apr 2025}
+    {Browser Extension Development}{}
 \begin{itemize}
-    \item Published browser extension on \href{https://chromewebstore.google.com/detail/codeforces-helper/ahoeafmlmoohkkalcickdnkifpfnolpj}{\textbf{Chrome Web Store}} \& \href{https://addons.mozilla.org/en-US/firefox/addon/codeforces-helper/}{\textbf{Firefox Add-ons}} serving \textbf{2,000+ active users}.
+    \item Published browser extension on \href{https://chromewebstore.google.com/detail/codeforces-helper/ahoeafmlmoohkkalcickdnkifpfnolpj}{Chrome Web Store} \& \href{https://addons.mozilla.org/en-US/firefox/addon/codeforces-helper/}{Firefox Add-ons} serving \textbf{2,000+ active users}.
     \item Engineered contest tracking, submission rating overlays, tag hiding filters, and custom problem list JSON backups, integrated with asynchronous \textbf{Codeforces REST API} sync and dynamic rating performance graphs.
 \end{itemize}
 
-\vspace{3pt}
-\resumeProjectHeading{\href{https://github.com/darelife/singAssist}{\textbf{Sing Assist -- Real-Time Audio Analysis}}}{Feb 2026 -- Apr 2026}
+\vspace{2pt}
+\resumeSubheading
+    {Sing Assist -- Real-Time Audio Analysis}{Feb 2026 -- Apr 2026}
+    {Systems Programming \ $\vert$\ \href{https://github.com/darelife/singAssist}{github.com/darelife/singAssist}}{}
 \begin{itemize}
     \item Developed a low-latency vocal pitch tracking engine in \textbf{Go} utilizing \textbf{FFT} and \textbf{pYIN} algorithms to extract audio frequencies.
     \item Designed real-time audio signal processing with \textbf{moving-average pitch smoothing}, octave-jump suppression, and frequency tolerance matching algorithms to compare user vocal pitch against reference audio tracks and render live precision scores.
 \end{itemize}
 
-\vspace{3pt}
-\resumeProjectHeading{\href{https://github.com/Darelife/MultiEquationSolver}{\textbf{Multi-Variable Equation Solver}}}{Jan 2024}
+\vspace{2pt}
+\resumeSubheading
+    {Predictive Prefetching for LLMs (Marvell Technologies)}{Jan 2026 -- Apr 2026}
+    {Machine Learning \ $\vert$\ \href{https://github.com/Darelife/Adaptive-Predictive-Caching-for-RL-Workloads}{github.com/Darelife/Adaptive-Predictive-Caching-for-RL-Workloads}}{}
 \begin{itemize}
-    \item Independently built a \textbf{C++ CLI solver} without AI assistance to apply linear algebra coursework and solve linear systems.
-    \item Implemented \textbf{Gauss-Jordan Elimination} with partial numerical pivoting algorithms, \textbf{RREF transformations}, matrix rank computation, and determinant validation to detect linearly dependent, consistent, and inconsistent equation systems.
+    \item Designed a 3-tier predictive caching system (HBM \(\to\) DRAM \(\to\) NVMe) for AI/ML training, combining a \textbf{SHADE-inspired heuristic}, an \textbf{XGBoost predictor}, and a \textbf{contextual bandit} to prefetch ``hot'' data before the GPU needs it.
+    \item Validated on real access traces from live \textbf{PyTorch ResNet/CIFAR-10} training runs using a custom simulator, achieving a \textbf{29.98\% cache hit rate} and cutting I/O latency by \textbf{$\sim$28\% (300ms \(\to\) 216ms)} vs.\ an LRU baseline.
 \end{itemize}
 
 % ---------- AWARDS & RECOGNITIONS ----------
 \section*{Awards \& Recognitions}
 \resumeProjectHeading{\textbf{Expert on Codeforces} (Peak Rating: \textbf{1643}) \ $\vert$\ Handle: \href{https://codeforces.com/profile/darelife}{darelife}}{Jun 2025}
 \begin{itemize}
-    \item Solved \textbf{714+ competitive programming problems} and competed in \textbf{55+ contests}.
+    \item Solved \textbf{738+ competitive programming problems} and competed in \textbf{55+ contests}.
 \end{itemize}
 
 % ---------- LEADERSHIP & VOLUNTEERING ----------
