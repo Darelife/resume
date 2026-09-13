@@ -73,7 +73,7 @@
 
 
 \vspace{4pt}
-\small{\textbf{Technical Proficiency:} C++, Python, C, Git, JJ, NextJS, PostgreSQL, Express.js, GCP, Java, Postman, MongoDB, Flask, Docker, Verilog, MySQL, GoLang, Firebase, Distributed Systems, CI/CD Pipelines, Kubernetes, Bash, Linux Fluency, Redis}
+\small{\textbf{Technical Proficiency:} C++, Python, C, Git, JJ, Numpy, Pandas, Matplotlib, Plotly, Tableau, NextJS, PostgreSQL, GCP, Java, Postman, MongoDB, Flask, Docker, MySQL, GoLang, Firebase, Kubernetes, Bash, Linux Fluency, Redis}
 
 % ---------- WORK EXPERIENCE ----------
 \section*{Work Experience}
@@ -81,8 +81,8 @@
 \begin{itemize}
     \item Interned in \textbf{Datastream (GCP)}, a serverless Change Data Capture (CDC) and replication service for real-time DB streams.
     \item Automated error-mapping pipelines across \textbf{5 database engines} (MySQL, PostgreSQL, MongoDB, SQL Server, \& Oracle), precisely classifying \textbf{220+ customer errors} into services to prevent internal engine failures from being falsely attributed.
-    \item Accelerated error-mapping rollouts from \textbf{1 week to automated execution}, safeguarding a tight \textbf{7-hr/month error budget} and suppressing the team’s primary source of on-call pages by eliminating false-positive alerts and restoring telemetry.
-    \item Built an \textbf{on-call telemetry dashboard} mapping SLO fast burns against pod rollouts to accelerate root-cause diagnosis.
+    \item Accelerated error-mapping rollouts from \textbf{1 week to automated execution}, safeguarding a tight \textbf{7-hr/month error budget} and suppressing the team's primary source of on-call pages by eliminating false-positive alerts and restoring telemetry.
+    \item Analyzed production telemetry using \textbf{Mash}, Google's SQL-like internal query language, over \textbf{Monarch monitoring data} to build an \textbf{on-call dashboard} correlating SLO fast burns with pod rollouts and accelerate root-cause diagnosis.
 \end{itemize}
 
 \vspace{4pt}
@@ -96,6 +96,15 @@
 % ---------- PROJECTS ----------
 \section*{Projects}
 
+\resumeSubheading
+    {Predictive Prefetching for LLMs (Marvell Technologies)}{Jan 2026 -- Apr 2026}
+    {Machine Learning \ $\vert$\ \href{https://github.com/Darelife/Adaptive-Predictive-Caching-for-RL-Workloads}{github.com/Darelife/Adaptive-Predictive-Caching-for-RL-Workloads}}{}
+\begin{itemize}
+    \item Designed a 3-tier predictive caching system (HBM \(\to\) DRAM \(\to\) NVMe) for AI/ML training, combining a \textbf{SHADE-inspired heuristic}, an \textbf{XGBoost predictor}, and a \textbf{contextual bandit} to prefetch ``hot'' data before the GPU needs it.
+    \item Validated on real access traces from live \textbf{PyTorch ResNet/CIFAR-10} training runs using a custom simulator, achieving a \textbf{29.98\% cache hit rate} and cutting I/O latency by \textbf{$\sim$28\% (300ms \(\to\) 216ms)} vs.\ an LRU baseline.
+\end{itemize}
+
+\vspace{2pt}
 \resumeSubheading
     {PacMan: Network Packet Analyzer}{Mar 2025}
     {Full-Stack Development \ $\vert$\ \href{https://github.com/Darelife/PacMan-hackenza2.0}{github.com/Darelife/PacMan-hackenza2.0}}{}
@@ -122,21 +131,10 @@
     \item Designed real-time audio signal processing with \textbf{moving-average pitch smoothing}, octave-jump suppression, and frequency tolerance matching algorithms to compare user vocal pitch against reference audio tracks and render live precision scores.
 \end{itemize}
 
-\vspace{2pt}
-\resumeSubheading
-    {Predictive Prefetching for LLMs (Marvell Technologies)}{Jan 2026 -- Apr 2026}
-    {Machine Learning \ $\vert$\ \href{https://github.com/Darelife/Adaptive-Predictive-Caching-for-RL-Workloads}{github.com/Darelife/Adaptive-Predictive-Caching-for-RL-Workloads}}{}
-\begin{itemize}
-    \item Designed a 3-tier predictive caching system (HBM \(\to\) DRAM \(\to\) NVMe) for AI/ML training, combining a \textbf{SHADE-inspired heuristic}, an \textbf{XGBoost predictor}, and a \textbf{contextual bandit} to prefetch ``hot'' data before the GPU needs it.
-    \item Validated on real access traces from live \textbf{PyTorch ResNet/CIFAR-10} training runs using a custom simulator, achieving a \textbf{29.98\% cache hit rate} and cutting I/O latency by \textbf{$\sim$28\% (300ms \(\to\) 216ms)} vs.\ an LRU baseline.
-\end{itemize}
-
 % ---------- AWARDS & RECOGNITIONS ----------
 \section*{Awards \& Recognitions}
-\resumeProjectHeading{\textbf{Expert on Codeforces} (Peak Rating: \textbf{1643}) \ $\vert$\ Handle: \href{https://codeforces.com/profile/darelife}{darelife}}{Jun 2025}
-\begin{itemize}
-    \item Solved \textbf{738+ competitive programming problems} and competed in \textbf{55+ contests}.
-\end{itemize}
+\resumeProjectHeading{\textbf{Expert on Codeforces} (Peak: \textbf{1643}) $\vert$ 738+ problems $\vert$ 55+ contests $\vert$ \href{...}{darelife}}{Jun 2025}
+\vspace{-15pt}
 
 % ---------- LEADERSHIP & VOLUNTEERING ----------
 \section*{Leadership \& Experience}
