@@ -1,12 +1,13 @@
 \documentclass[10pt,letterpaper]{article}
 
-\usepackage[margin=0.6in,top=0.35in,bottom=0.15in]{geometry}
+\usepackage[left=0.5in,right=0.5in,top=0.3in,bottom=0.12in]{geometry}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{hyperref}
 \usepackage[T1]{fontenc}
 \usepackage{xcolor}
 \usepackage{tabularx}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 
 \pagestyle{empty}
 \raggedbottom
@@ -24,14 +25,14 @@
 
 % Section formatting
 \titleformat{\section}{\large\bfseries\scshape\color{primary}}{}{0em}{}[\color{primary}\titlerule]
-\titlespacing{\section}{0pt}{11pt}{5pt}
+\titlespacing{\section}{0pt}{9pt}{6pt}
 
 % Itemize formatting
-\setlist[itemize]{leftmargin=14pt, topsep=2pt, itemsep=2pt, parsep=0pt, partopsep=0pt}
+\setlist[itemize]{leftmargin=14pt, topsep=1.75pt, itemsep=1.3pt, parsep=0pt, partopsep=0pt}
 
 % Subheading commands
 \newcommand{\resumeSubheading}[4]{
-  \vspace{2pt}
+  \vspace{1.5pt}
   \noindent
   \begin{tabularx}{\linewidth}{@{}X r@{}}
     \textbf{#1} & #2 \\
@@ -40,7 +41,7 @@
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-  \vspace{2pt}
+  \vspace{1.5pt}
   \noindent
   \begin{tabularx}{\linewidth}{@{}X r@{}}
     #1 & #2 \\
@@ -73,21 +74,31 @@
 
 
 \vspace{4pt}
-\small{\textbf{Technical Proficiency:} C++, Python, C, Git, JJ, NextJS, PostgreSQL, Express.js, GCP, Java, Postman, MongoDB, Flask, Docker, Verilog, MySQL, GoLang, Firebase, Distributed Systems, CI/CD Pipelines, Kubernetes, Bash, Linux Fluency, Redis}
+{\small
+\begin{tabularx}{\linewidth}{@{}Y Y@{}}
+    \textbf{Languages:} C++, Python, Java, Go, C, Bash &
+    \textbf{Backend \& Data:} PostgreSQL, MySQL, MongoDB, Redis \\
+    \textbf{Systems:} Linux, Docker, Kubernetes, GCP, CI/CD &
+    \textbf{Frameworks:} Flask, Express.js, Next.js, Firebase \\
+    \textbf{Tools:} Git, JJ, Postman &
+    \textbf{Concepts:} Distributed Systems, DBMS, Computer Networks
+\end{tabularx}}
 
 % ---------- WORK EXPERIENCE ----------
 \section*{Work Experience}
 \resumeProjectHeading{\textbf{Google} $\vert$\ Software Engineering Intern\ | \textit{\href{https://www.google.com}{google.com}}} {May 2026 -- Aug 2026}
 \begin{itemize}
-    \item Interned in \textbf{Datastream (GCP)}, a serverless Change Data Capture (CDC) and replication service for real-time DB streams.
-    \item Automated error-mapping pipelines across \textbf{5 database engines} (MySQL, PostgreSQL, MongoDB, SQL Server, \& Oracle), precisely classifying \textbf{220+ customer errors} into services to prevent internal engine failures from being falsely attributed.
-    \item Accelerated error-mapping rollouts from \textbf{1 week to automated execution}, safeguarding a tight \textbf{7-hr/month error budget} and suppressing the team’s primary source of on-call pages by eliminating false-positive alerts and restoring telemetry.
-    \item Built an \textbf{on-call telemetry dashboard} mapping SLO fast burns against pod rollouts to accelerate root-cause diagnosis.
+    \vspace{1pt}
+    \item Worked on \textbf{Google Cloud Datastream}, a distributed serverless CDC service for real-time, heterogeneous-database replication.
+    \item Built and automated a high-accuracy error-classification pipeline for \textbf{MySQL, PostgreSQL, MongoDB, SQL Server, and Oracle}, mapping \textbf{$\sim$250 errors} to originating services and eliminating numerous false positives.
+    \item Cut error-mapping rollouts from \textbf{1 week to automated execution}, protecting a \textbf{7-hr/month error budget} by reducing unmapped errors and the team’s primary source of on-call pages.
+    \item Built an \textbf{on-call observability dashboard} correlating SLO fast burns with pod rollouts to diagnose multiple production outages.
 \end{itemize}
 
 \vspace{4pt}
 \resumeProjectHeading{\textbf{AI Gurukul} $\vert$\ Software Engineering Intern\ | \textit{\href{https://www.aigurukul.dev/}{aigurukul.dev}}} {May 2025 -- Jul 2025}
 \begin{itemize}
+    \vspace{1pt}
     \item Developed AI agents using \textbf{CrewAI} and \textbf{Gemini API} with \textbf{PostgreSQL} for \href{https://github.com/Darelife/xpia}{XPIA} and \href{https://github.com/Darelife/BITS_PS1/tree/main/PrakharAndSagar_GenAiOps}{E-Library}.
     \item Implemented a PDF RAG pipeline combining \textbf{BM25 keyword matching} and \textbf{vector search} to reduce LLM hallucinations.
     \item Simulated an automated Cross Platform Injection Attack (\textbf{XPIA}) to manipulate a \textbf{Supabase Postgres DB}.
@@ -100,6 +111,7 @@
     {PacMan: Network Packet Analyzer}{Mar 2025}
     {Full-Stack Development \ $\vert$\ \href{https://github.com/Darelife/PacMan-hackenza2.0}{github.com/Darelife/PacMan-hackenza2.0}}{}
 \begin{itemize}
+    \vspace{1pt}
     \item Won \textbf{2nd place out of 200+ teams} in a 24-hr hackathon building a web PCAP/PCAPNG network packet analyzer.
     \item Engineered a full-stack deep packet inspection platform using \textbf{Next.js}, \textbf{Flask}, \textbf{Scapy}, and \textbf{Pyshark} to capture live network packets, parse multi-layer protocol headers and payloads, and stream real-time telemetry metrics via WebSockets.
 \end{itemize}
@@ -109,6 +121,7 @@
     {Codeforces Helper -- Browser Extension}{Dec 2024 -- Apr 2025}
     {Browser Extension Development}{}
 \begin{itemize}
+    \vspace{1pt}
     \item Published browser extension on \href{https://chromewebstore.google.com/detail/codeforces-helper/ahoeafmlmoohkkalcickdnkifpfnolpj}{Chrome Web Store} \& \href{https://addons.mozilla.org/en-US/firefox/addon/codeforces-helper/}{Firefox Add-ons} serving \textbf{2,000+ active users}.
     \item Engineered contest tracking, submission rating overlays, tag hiding filters, and custom problem list JSON backups, integrated with asynchronous \textbf{Codeforces REST API} sync and dynamic rating performance graphs.
 \end{itemize}
@@ -118,6 +131,7 @@
     {Sing Assist -- Real-Time Audio Analysis}{Feb 2026 -- Apr 2026}
     {Systems Programming \ $\vert$\ \href{https://github.com/darelife/singAssist}{github.com/Darelife/singAssist}}{}
 \begin{itemize}
+    \vspace{1pt}
     \item Developed a low-latency vocal pitch tracking engine in \textbf{Go} utilizing \textbf{FFT} and \textbf{pYIN} algorithms to extract audio frequencies.
     \item Designed real-time audio signal processing with \textbf{moving-average pitch smoothing}, octave-jump suppression, and frequency tolerance matching algorithms to compare user vocal pitch against reference audio tracks and render live precision scores.
 \end{itemize}
@@ -127,23 +141,24 @@
     {Predictive Prefetching for LLMs (Marvell Technologies)}{Jan 2026 -- Apr 2026}
     {Machine Learning \ $\vert$\ \href{https://github.com/Darelife/Adaptive-Predictive-Caching-for-RL-Workloads}{github.com/Darelife/Adaptive-Predictive-Caching-for-RL-Workloads}}{}
 \begin{itemize}
+    \vspace{1pt}
     \item Designed a 3-tier predictive caching system (HBM \(\to\) DRAM \(\to\) NVMe) for AI/ML training, combining a \textbf{SHADE-inspired heuristic}, an \textbf{XGBoost predictor}, and a \textbf{contextual bandit} to prefetch ``hot'' data before the GPU needs it.
     \item Validated on real access traces from live \textbf{PyTorch ResNet/CIFAR-10} training runs using a custom simulator, achieving a \textbf{29.98\% cache hit rate} and cutting I/O latency by \textbf{$\sim$28\% (300ms \(\to\) 216ms)} vs.\ an LRU baseline.
 \end{itemize}
 
 % ---------- AWARDS & RECOGNITIONS ----------
 \section*{Awards \& Recognitions}
-\resumeProjectHeading{\textbf{Expert on Codeforces} (Peak Rating: \textbf{1643}) \ $\vert$\ Handle: \href{https://codeforces.com/profile/darelife}{darelife}}{Jun 2025}
+\resumeProjectHeading{\textbf{Expert on Codeforces} (Peak Rating: \textbf{1643}) \ $\vert$\ Handle: \href{https://codeforces.com/profile/darelife}{darelife}}{Nov 2023 -- Present}
 \begin{itemize}
-    \item Solved \textbf{738+ competitive programming problems} and competed in \textbf{55+ contests}.
+    \item Solved \textbf{750+ competitive programming problems} and competed in \textbf{65+ contests}.
 \end{itemize}
 
 % ---------- LEADERSHIP & VOLUNTEERING ----------
 \section*{Leadership \& Experience}
 \resumeProjectHeading{\textbf{AlgoManiaX} (Competitive Programming Club, BITS Goa) \ $\vert$\ Coordinator}{Mar 2024 -- Present}
 \begin{itemize}
-    \item Developed the official \href{https://algomaniax.vercel.app/}{AlgoManiaX website} and a \href{https://github.com/darelife/synanit2.0}{Discord Bot} hosted on \textbf{Google Cloud VM} for club operations.
-    \item Created \textbf{Manim} animation videos for problem explanations; POC for BGCL 6.0 and \href{https://github.com/Darelife/AlgoInstaAutomated/}{automated social media updates}.
+    \item Led a \textbf{70+ member} club; built the \href{https://algomaniax.vercel.app/}{AlgoManiaX website} and hosted its \href{https://github.com/darelife/synanit2.0}{Discord bot} on a \textbf{Google Cloud VM}.
+    \item Organized \textbf{40+ events} for \textbf{1,000+ unique participants} and created \textbf{Manim} animations for problem explanations.
 \end{itemize}
 
 \end{document}
